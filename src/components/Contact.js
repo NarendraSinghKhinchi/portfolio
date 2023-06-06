@@ -42,7 +42,7 @@ function Contact() {
         >   
             {/* https://formsubmit.co/el/dugaye */}
             <form action="https://formsubmit.co/narendrasingh30324@gmail.com" method="POST">
-                <input type="hidden" name="_next" value="http://localhost:3000/" />
+                <input type="hidden" name="_next" value="https://narendra-singh-khinchi.onrender.com/" />
                 <input type="hidden" name="_captcha" value="false"></input>
                 <label>Name<br></br>
                     <input name="name" type='text'placeholder='Enter Your Name' ></input>
