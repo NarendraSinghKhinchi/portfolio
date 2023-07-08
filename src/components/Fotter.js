@@ -12,8 +12,8 @@ function Fotter() {
     height:"50px",
     color:"rgb(255,0,0,0.6)",
     "&:hover" : {
-        boxShadow: "rgba(0, 0, 0, 0.5) 5px 5px 15px",
-        color:"blue",
+      boxShadow: "rgba(0, 0, 0, 0.5) 5px 5px 15px",
+      color:"blue",
     }
   }
   return (

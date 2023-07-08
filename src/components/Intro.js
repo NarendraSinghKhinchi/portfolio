@@ -1,6 +1,8 @@
 import React from 'react'
 import { Box,Button,Typography } from '@mui/material'
+import TypingText from './TypingText'
 function Intro() {
+  
   return (
     <Box
       id="home"
@@ -9,7 +11,11 @@ function Intro() {
       padding={{sm:"100px 50px",xs:"50px 10px"}}
       textAlign="center"
     >
-        <Typography className='intro-name' gutterBottom sx={{color:"#111"}} fontWeight={750} fontSize={46} textAlign={'center'} lineHeight="80.64px" letterSpacing={3}>HEY, MY NAME IS NARENDRA SINGH</Typography>
+        <Typography className='intro-name' gutterBottom sx={{color:"#111"}} fontWeight={750} fontSize={46} textAlign={'center'} lineHeight="80.64px" letterSpacing={3}>
+          HEY, MY NAME IS    
+          <TypingText text=" NARENDRA&nbsp;SINGH"></TypingText>
+        </Typography>
+        {/* <TypingText></TypingText> */}
         <Typography className='intro-para' 
           fontSize={18} 
           letterSpacing={0.8} 
