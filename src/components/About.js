@@ -79,9 +79,7 @@ function About() {
             fontSize={18}
             padding="15px"
           >
-            Hello, my name is Narendra Singh Khinchi.I am a
-            Software Developer Engineer at Medorn Ventures with a strong background in full-stack development, specializing in JavaScript technologies like ReactJS, NodeJS, and React Native. Skilled in building scalable web and mobile applications, optimizing database performance, and implementing CI/CD pipelines. Passionate about solving complex problems and enhancing user experiences through innovative tech solutions. Proven leadership in guiding teams and delivering impactful projects. Open to new opportunities in software development and eager to contribute to dynamic teams driving technological innovation.
-            
+            👋 Hello! My name is Narendra Singh Khinchi, and I'm a Software Developer Engineer at Medorn Ventures. I have a strong background in full-stack development 💻, specializing in JavaScript technologies like ReactJS, NodeJS, and React Native. I excel in building scalable web and mobile applications 📱, optimizing database performance 📊, and implementing CI/CD pipelines 🚀. Passionate about solving complex problems 🧩 and enhancing user experiences through innovative tech solutions 🌟, I bring proven leadership 👨‍💼 in guiding teams to deliver impactful projects 🏆. Currently seeking new opportunities in software development to contribute to dynamic teams driving technological innovation ⚙️.
           </Typography>
         </Box>
         {/* <Box
