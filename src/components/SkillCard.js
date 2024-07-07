@@ -1,5 +1,4 @@
 import React from 'react'
-import { Typography} from '@mui/material'
 function SkillCard({skill}) {
 //   const [animeWidth , setAnimeWidth] = useState(0);
 
@@ -9,25 +8,21 @@ function SkillCard({skill}) {
 //     }, 1000);
 //   },[]);
   return (
-    <Typography className='skill-cont' 
-        textAlign="center" 
-        key={skill} 
-        fontWeight={700} 
-        height='50px' 
-        fontSize={18} 
-        width="150px" 
-        component="div"
-        sx={{margin:"10px",
-        paddingTop:"10px",
-        borderRadius:"10px",
-        boxSizing:"border-box",
+    <div 
+      style={{
+        fontSize:"18px",
+        fontWeight:"500",
+        padding:"10px 10px",
         backgroundColor:"rgb(153,153,153,0.1)",
-        position:'relative',
-        }}
-        >
-        {skill.skill}
-        
-        </Typography>
+        borderRadius:"5px",
+        width:'fit-content',
+        flexShrink:0,
+        minWidth:"120px",
+        textAlign:"center"
+      }}
+      >
+      {skill.skill}
+      </div>
   )
 }
 

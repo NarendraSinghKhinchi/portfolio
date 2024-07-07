@@ -55,13 +55,41 @@
   }
   
 }
-@media  only screen and (max-width:400px) {
-  .skill-cont{
-    font-size:14px !important;
-    width:120px !important;
-    height:30px !important;
-    padding-top: 5px !important;
-  }
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+}
+
+.card iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
 }
 
 

@@ -1,8 +1,30 @@
 import React from 'react'
 import { Box, Typography,Stack,Button } from '@mui/material'
-import exerciseImg from "../Assets/exercise.png"
-import reelsImg from "../Assets/reels.png"
-import galleryImg from "../Assets/gallery.png"
+
+const projects = [
+  {
+    name:"Exercises Web App",
+    url:"https://desiakhada.onrender.com/"
+  },
+  {
+    name:"Reels Clone",
+    url:"https://reels-7303d.firebaseapp.com/"
+  },
+  {
+    name:"URL Shortner",
+    url:"https://url-shortner-5jap.onrender.com"
+  },
+  {
+    name:"Camera + Gallery",
+    url:"https://narendrasinghkhinchi.github.io/camera-gallery/index.html"
+  },
+  {
+    name:"Open Board",
+    url:"https://openboard-tjog.onrender.com"
+  },
+
+  
+]
 function Projects() {
   return (
     <Box id="projects"
@@ -11,28 +33,20 @@ function Projects() {
     >
       <Typography className='section-heading' gutterBottom fontWeight={800} letterSpacing={3} fontSize={30} sx={{margin:"auto",width:{xs:"150px",sm:"220px"}}} >PROJECTS</Typography>
       <div className='section-heading-underline'></div>
-      <Stack 
-        direction={{md:"row",sm:"col"}}
-        gap={{xs:2,md:20}}
-        maxWidth="800px"
-        margin='auto'
-        marginBottom='50px'
-        justifyContent='center'
-        alignItems='center'
-      >
-        <img className='image-card' src={exerciseImg}></img>
-        <Box
-          minWidth="300px"
-          textAlign='center'
-        >
-          <Typography gutterBottom fontSize={22} fontWeight={600}>Exercises Web App</Typography>
-          <Typography gutterBottom variant='body2' color="rgb(153,153,153)" fontSize={15}>A modern Web application built using React where users can choose from a variety of around 900+ exercises</Typography>
-          <Button  variant='contained' sx={{textTransform:"none", backgroundColor:"rgb(153,153,153,0.3)",marginTop:"15px", width:"180px",height:"50px",fontWeight:"600",fontSize:"18px","&:hover":{backgroundColor: "red",color:"white" } }}>
-            <a href="https://desiakhada.onrender.com/" style={{textDecoration:"none",color:"black"}}>Live Demo</a>
-          </Button>
-        </Box>
-      </Stack>
-      <Stack 
+
+
+      <div class="card-container">
+        {projects.map((project)=>(
+          <div class="card" onClick={(e)=>{
+            window.open(project.url, '_blank');
+          }}>
+            <iframe src={project.url} frameborder="0"></iframe>
+            <h3>{project.name}</h3>
+          </div>
+        ))}
+      </div>
+      
+      {/* <Stack 
         direction={{md:"row",sm:"col"}}
         gap={{xs:2,md:20}}
         maxWidth="800px"
@@ -52,8 +66,8 @@ function Projects() {
             <a href="https://reels-7303d.firebaseapp.com/" target='_blank' style={{textDecoration:"none",color:"black"}}>Live Demo</a>
           </Button>
         </Box>
-      </Stack>
-      <Stack 
+      </Stack> */}
+      {/* <Stack 
         direction={{md:"row",sm:"col"}}
         gap={{xs:2,md:20}}
         maxWidth="800px"
@@ -75,7 +89,7 @@ function Projects() {
             <a href="https://narendrasinghkhinchi.github.io/camera-gallery/index.html" target='_blank' style={{textDecoration:"none",color:"black"}}>Live Demo</a>
           </Button>
         </Box>
-      </Stack>
+      </Stack> */}
     </Box>
   )
 }

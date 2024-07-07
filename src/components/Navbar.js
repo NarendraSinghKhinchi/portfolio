@@ -20,12 +20,12 @@ function Navbar() {
     >
         <Stack direction='row'
             alignItems='center'
-            gap={2}
+            gap={5}
         >
             <Avatar
                 alt="Narendra Singh"
                 src={profileImg}
-                sx={{ width: "45px", height: "45px",marginLeft:"10px" }}
+                sx={{ width: "50px", height: "50px",marginLeft:"10px" }}
             />
             <h3>NARENDRA&nbsp;SINGH</h3>
         </Stack>
@@ -35,8 +35,9 @@ function Navbar() {
             alignItems='center'
             justifyContent="space-evenly"
             bgcolor="white"
-            width="500px"
-            
+            gap={8}
+            paddingRight={10}
+            display={{sm:"flex", xs:"none"}}
             sx={{
                 "& a" : {
                     color:'black',

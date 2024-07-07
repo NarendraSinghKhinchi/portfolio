@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box,Typography, Stack} from '@mui/material'
-import SkillCard from './SkillCard';
+import { Banner } from './Banner';
 function About() {
   const skillsMap = [{
       skill:"HTML",
@@ -39,7 +39,19 @@ function About() {
       progress:85
     },
     {
-      skill:"Material UI",
+      skill:"Tailwind CSS",
+      progress:75
+    },
+    {
+      skill:"AWS",
+      progress:75
+    },
+    {
+      skill:"NGINX",
+      progress:75
+    },
+    {
+      skill:"PM2",
       progress:75
     },
   ]
@@ -60,25 +72,19 @@ function About() {
         alignItems='center'
       >
         <Box
-          sx={{maxWidth:{md:"350px",sm:"90%"},
-          paddingTop:"35px"}}
+          sx={{paddingTop:"35px"}}
         >
           <Typography variant='body2' 
             color="rgb(153,153,153)" 
             fontSize={18}
             padding="15px"
           >
-            Hello, my name is Narendra Singh Khinchi. 
-            I am an aspiring Electronics and Communication engineer with a strong foundation in programming and web development. 
-            Currently pursuing a Bachelor of Technology degree at Technocrats Institute of Technology, Bhopal.
-            I have a good understanding of web development techonologies like HTML, CSS, JavaScript and React.
-            I am well versed with several tools like Git, Github, Material and more.
-            I am good at data structures and algorithms my current contest rating on leetcode is 1500.
-            I am actively looking for internship opportunities in the development field.
+            Hello, my name is Narendra Singh Khinchi.I am a
+            Software Developer Engineer at Medorn Ventures with a strong background in full-stack development, specializing in JavaScript technologies like ReactJS, NodeJS, and React Native. Skilled in building scalable web and mobile applications, optimizing database performance, and implementing CI/CD pipelines. Passionate about solving complex problems and enhancing user experiences through innovative tech solutions. Proven leadership in guiding teams and delivering impactful projects. Open to new opportunities in software development and eager to contribute to dynamic teams driving technological innovation.
             
           </Typography>
         </Box>
-        <Box
+        {/* <Box
           sx={{maxWidth:{md:"450px",sm:"90%"},
           display:'flex' , 
           justifyContent:"space-evenly",
@@ -93,10 +99,12 @@ function About() {
             <SkillCard key={skill.skill} skill={skill}></SkillCard>
           ))
         }
-        </Box>
+        </Box> */}
         
       </Stack>
+      <Typography className='section-heading' gutterBottom fontWeight={600} letterSpacing={2} fontSize={25} sx={{margin:"auto",width:{xs:"150px",sm:"220px"}}} >MY SKILLS</Typography>
       
+      <Banner skills={skillsMap} />
     </Box>
   )
 }
