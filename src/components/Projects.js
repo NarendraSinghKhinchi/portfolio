@@ -1,26 +1,35 @@
 import React from 'react'
 import { Box, Typography,Stack,Button } from '@mui/material'
-
+import exerciseImg from "../Assets/exercise.png" ;
+import galleryImg from '../Assets/gallery.png';
+import reelsImg from '../Assets/reels.png';
+import urlImg from '../Assets/url.png'
+import boardImg from '../Assets/board.png';
 const projects = [
   {
     name:"Exercises Web App",
-    url:"https://desiakhada.onrender.com/"
+    url:"https://desiakhada.onrender.com/",
+    img:exerciseImg
   },
   {
     name:"Reels Clone",
-    url:"https://reels-7303d.firebaseapp.com/"
+    url:"https://reels-7303d.firebaseapp.com/",
+    img:reelsImg
   },
   {
     name:"URL Shortner",
-    url:"https://url-shortner-5jap.onrender.com"
+    url:"https://url-shortner-5jap.onrender.com",
+    img:urlImg
   },
   {
     name:"Camera + Gallery",
-    url:"https://narendrasinghkhinchi.github.io/camera-gallery/index.html"
+    url:"https://narendrasinghkhinchi.github.io/camera-gallery/index.html",
+    img:galleryImg
   },
   {
     name:"Open Board",
-    url:"https://openboard-tjog.onrender.com"
+    url:"https://openboard-tjog.onrender.com",
+    img:boardImg
   },
 
   
@@ -40,56 +49,14 @@ function Projects() {
           <div class="card" onClick={(e)=>{
             window.open(project.url, '_blank');
           }}>
-            <iframe src={project.url} frameborder="0"></iframe>
+            <div className='img-wrapper'> 
+              <img src={project.img} alt="0"></img>
+            </div>
+            
             <h3>{project.name}</h3>
           </div>
         ))}
       </div>
-      
-      {/* <Stack 
-        direction={{md:"row",sm:"col"}}
-        gap={{xs:2,md:20}}
-        maxWidth="800px"
-        margin='auto'
-        marginBottom='50px'
-        justifyContent='center'
-        alignItems='center'
-      >
-        <img className='image-card' src={reelsImg}></img>
-        <Box
-          minWidth="300px"
-          textAlign='center'
-        >
-          <Typography gutterBottom fontSize={22} fontWeight={600}>Reels Clone</Typography>
-          <Typography gutterBottom variant='body2' color="rgb(153,153,153)" fontSize={15}>I made clone of Instagram Reels tried to implement the same features provided by it</Typography>
-          <Button  variant='contained' sx={{textTransform:"none", backgroundColor:"rgb(153,153,153,0.3)",marginTop:"15px", width:"180px",height:"50px",fontWeight:"600",fontSize:"18px","&:hover":{backgroundColor: "red",color:"white" } }}>
-            <a href="https://reels-7303d.firebaseapp.com/" target='_blank' style={{textDecoration:"none",color:"black"}}>Live Demo</a>
-          </Button>
-        </Box>
-      </Stack> */}
-      {/* <Stack 
-        direction={{md:"row",sm:"col"}}
-        gap={{xs:2,md:20}}
-        maxWidth="800px"
-        margin='auto'
-        marginBottom='50px'
-        justifyContent='center'
-        alignItems='center'
-      >
-        <img className='image-card' src={galleryImg}></img>
-        <Box
-          minWidth="300px"
-          textAlign='center'
-        >
-          <Typography gutterBottom fontSize={22} fontWeight={600}>Camera + Gallery App</Typography>
-          <Typography gutterBottom variant='body2' color="rgb(153,153,153)" fontSize={15}>A web-based camera application where users can click photos.
-            They can also try different filters. Users can take videos. The photos and videos are saved automatically in indexedDB storage
-          </Typography>
-          <Button className='section-btn'  variant='contained' sx={{textTransform:"none", backgroundColor:"rgb(153,153,153,0.3)",marginTop:"15px", width:"180px",height:"50px",fontWeight:"600",fontSize:"18px","&:hover":{backgroundColor: "red",color:"white" } }}>
-            <a href="https://narendrasinghkhinchi.github.io/camera-gallery/index.html" target='_blank' style={{textDecoration:"none",color:"black"}}>Live Demo</a>
-          </Button>
-        </Box>
-      </Stack> */}
     </Box>
   )
 }
