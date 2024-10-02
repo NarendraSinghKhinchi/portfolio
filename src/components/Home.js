@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Intro from './Intro'
 import About from './About'
 import Projects from './Projects'
+import Experience from './experience'
 import Contact from './Contact'
 import Footer from './Fotter'
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
         <Navbar></Navbar>
         <Intro></Intro>
         <About></About>
+        <Experience></Experience>
         <Projects></Projects>
         <Contact></Contact>
         <Footer></Footer>
